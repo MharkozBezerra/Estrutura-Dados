@@ -7,6 +7,17 @@
  == Atividade: MAPA - ADS - ESTRUTURA DE DADOS I - 52/2021 =====
  ===============================================================
 */
+/*==============================================================
+ [ok] - Ao adiiconar o trabalho, o último a entrar é o último a sair.
+ [ok] - Ao adicionar o trabalho, o primeiro a entrar é o primeiro a sair.
+ [ok] - Dados a ser adicionados:
+	[ok] - o RA do aluno
+	[ok] - o Nome do arquivo
+	[ok] - o Extensão do arquivo
+	[ok] - o Matrícula do professor responsável pela correção
+ [ok] - ao excluir um elemento,  sempre irá excluir o primeiro elemento da fila.
+
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -96,20 +107,25 @@ void mostrar_fila() {
 		}
 	}
 }
-
+//O programa deve ter um menu principal em forma de laço de repetição que atenda aos seguintes requisitos:
 int main() {
 	setlocale(LC_ALL, "portuguese");
 	int opt;
 	bool sair;
+	//O menu sempre deve imprimir o conteúdo da fila (do início em direção ao fim);
 	mostrar_fila();
+	//Após a impressão do conteúdo da fila, o usuário deve ser informado de que pode realizar as seguintes operações:
 	while (sair != true) {
-
-		printf("----------MENU-----------\n");
+		//o    Inserir um elemento na fila;
+		printf("----------Escolha uma das opções abaixo-----------\n");
 		printf("1. Adicionar novo elemento\n");
+		//o    Remover um elemento da fila;
 		printf("2. Remover elemento\n");
+		//o    Esvaziar a fila;
 		printf("3. Esvaziar Fila\n");
+		//o    Encerrar o programa.
 		printf("0. Sair\n");
-		printf("Opção: 1-2-3-0\n");
+		printf("Opção:\n");
 		scanf("%d", &opt);
 		system("cls");
 		setbuf(stdin,NULL);
